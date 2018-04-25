@@ -121,7 +121,7 @@ command! -nargs=0 MatchmakerToggle call s:toggle()
 
 augroup Matchmaker
     au!
-    au CursorMoved,CursorMovedI,WinEnter,VimEnter * call s:matchmake(s:needle())
+    au CursorHold,CursorHoldI,WinEnter,VimEnter * call s:matchmake(s:needle())
     au WinLeave * call s:matchunmake()
 augroup END
 
